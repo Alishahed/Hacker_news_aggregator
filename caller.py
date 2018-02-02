@@ -37,7 +37,7 @@ def scrapper(df_in):
             df_in['URL'][df_index] = 'NaN'
     return df_in
 
-#Main file to search HackerNews and scrap pages based on thier links
+#Main file to search HackerNews and scrap pages based on their links
 df_hn_out = api_call(no_page = 6)
 df_hn_scrap = scrapper(df_hn_out)
 df_hn_scrap = df_hn_scrap.dropna(axis=0)
